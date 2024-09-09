@@ -4,6 +4,10 @@ type Queue[E any] struct {
 	Items []E
 }
 
+func New[E any]() *Queue[E] {
+	return &Queue[E]{Items: []E{}}
+}
+
 func (q *Queue[E]) Push(element E) {
 	q.Items = append(q.Items, element)
 }

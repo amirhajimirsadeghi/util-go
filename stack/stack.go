@@ -4,6 +4,10 @@ type Stack[E any] struct {
 	Items []E
 }
 
+func New[E any]() *Stack[E] {
+	return &Stack[E]{Items: []E{}}
+}
+
 func (q *Stack[E]) Push(element E) {
 	q.Items = append(q.Items, element)
 }
